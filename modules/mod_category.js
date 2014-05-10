@@ -12,7 +12,7 @@ var Categories = {
   items: [
     {
       code: 10000,
-      name: "デバイス",
+      name: "设备",
       items: [
         { code: "10001", name: "iOS", icon: "icon-apple"},
         { code: "10002", name: "Android", icon: "icon-android" },
@@ -21,24 +21,24 @@ var Categories = {
     },
     {
       code: 20000,
-      name: "業種",
+      name: "类别",
       items: [
-        { code: "20001", name: "販売", icon: "icon-yen" },           // 贩卖/零售"
+        { code: "20001", name: "销售", icon: "icon-yen" },           // 贩卖/零售"
         { code: "20002", name: "制造", icon: "icon-tags" },          // 制造
         { code: "20003", name: "政府", icon: "icon-building" },      // 政府部门/事业单位
         { code: "20004", name: "金融", icon: "icon-dollar" },        // 金融
-        { code: "20005", name: "運輸", icon: "icon-truck" },         // 运输
-        { code: "20006", name: "サービス", icon: "icon-thumbs-up" }, // 服务
+        { code: "20005", name: "运输", icon: "icon-truck" },         // 运输
+        { code: "20006", name: "服务", icon: "icon-thumbs-up" }, // 服务
         { code: "20007", name: "通信", icon: "icon-bullhorn" },     //信息・通信/广播
-        { code: "20008", name: "電気", icon: "icon-fire" },         // 电器煤气
+        { code: "20008", name: "电器", icon: "icon-fire" },         // 电器煤气
         { code: "20009", name: "教育", icon: "icon-book"},          // 教育
-        { code: "20010", name: "その他", icon: "icon-bookmark" }    // 其他
+        { code: "20010", name: "其他", icon: "icon-bookmark" }    // 其他
       ]
     }
     ,
     {
       code: 30000,
-      name: "規模",
+      name: "规模",
       items: [
         { code: "30001", name: "1000~2000" },
         { code: "30002", name: "500~1000" },
