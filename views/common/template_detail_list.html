@@ -60,7 +60,7 @@
 <!-- 详细列表项目共通模板 -->
 <script type="text/template" id="template_detail_list_item">
 <$ if(!apps ||  apps.length == 0) { $>
-  <tr><td colspan="{{cols.length}}">データーがありません</td></tr>
+  <tr><td colspan="{{cols.length}}">没有找到符合要求的应用</td></tr>
 <$ } else { $>
 <$ _.each(apps, function(app) { $>
 <tr>
