@@ -20,10 +20,10 @@ exports.simpleLogin = function(req, res){
 
   log.debug("user name: " + req.query.name);
 
-  // パスワードのsha256文字列を取得する
+  // 取得输入
   req.query.password = auth.sha256(req.query.password);
 
-  // 認証処理
+  // 认证处理
   auth.simpleLogin(req, res, function(err, result) {
 
     if (err) {
