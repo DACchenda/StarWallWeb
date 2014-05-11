@@ -3,18 +3,18 @@
 <script>
     // 初期化所有列
     DetailList.all_cols = [
-        {name: "icon", title: "アイコン"}
+        {name: "icon", title: "图标"}
         ,{name: "info", title: "App"}
         ,{name: "os", title: "OS"}
         ,{name: "require", title: "要求"}
-        ,{name: "status", title: "状態"}
-        ,{name: "createAt", title: "作成日時"}
+        ,{name: "status", title: "状态"}
+        ,{name: "createAt", title: "作成日期"}
         ,{name: "createBy", title: "作成者"}
-        ,{name: "updateAt", title: "更新日時"}
+        ,{name: "updateAt", title: "更新日期"}
         ,{name: "updateBy", title: "更新者"}
-        ,{name: "update_info", title: "更新情報"}
-        ,{name: "rank", title: "ランキング"}
-        ,{name: "downloadcount", title: "ダウンロード数"}
+        ,{name: "update_info", title: "更新情报"}
+        ,{name: "rank", title: "评分"}
+        ,{name: "downloadcount", title: "下载量"}
         ,{name: "option", title: "操作"}
     ];
 </script>
@@ -78,8 +78,8 @@
 	<$ } else if(col.name == "info") { $>
 	<td style="min-width:150px;">
 		<strong>名称：</strong> {{ _.escape(app.name) }}<br>
-		<strong>バージョン：</strong> {{ _.escape(app.version) }}<br>
-		<strong>サイズ：</strong> {{ $sw.string.bytesToSize(app.size) }} <br>
+		<strong>版本：</strong> {{ _.escape(app.version) }}<br>
+		<strong>大小：</strong> {{ $sw.string.bytesToSize(app.size) }} <br>
 	</td>
 	<$ } else if(col.name == "os") { $>
 	<td style="min-width:48px;">
@@ -89,7 +89,7 @@
 	<!-- 需求 -->
 	<td style="min-width:150px;">
 		<strong>OS:</strong> {{ (app.require && app.require.os) ? app.require.os : "No require" }}<br>
-		<strong>デバイス：</strong> {{ (app.require && app.require.device) ? app.require.device : "No require" }}<br>
+		<strong>设备：</strong> {{ (app.require && app.require.device) ? app.require.device : "No require" }}<br>
 	</td>
 	<$ } else if(col.name == "status") { $>
 	<!-- 状态 -->
@@ -103,14 +103,14 @@
 		<$ } else if(app.status == 3) { $>
 		审核未通过
 		<$ } else { $>
-		無効
+		无效
 		<$ } $>
 	</td>
 	<$ } else if(col.name == "option") { $>
 	<td nowrap>
 		<$ if($app.canEdit(app)) { $>
 		<a href="/app/add/step1?appId={{ app._id }}" style="float:left;margin-right:2px;margin-top: 4px">
-			<button class="btn btn-small btn-success" operation="edit">編 集</button>
+			<button class="btn btn-small btn-success" operation="edit">编辑</button>
 		</a> <br/>
 		<$ } $>
 		<$ if(app.downloadURL) { $>
@@ -151,9 +151,9 @@
 	<$ } else if(col.name == "update_info") { $>
 	<td nowrap>
 		<strong>更新者：</strong> {{ _.escape(app.updateBy) }}<br>
-		<strong>更新日時：</strong> {{ smart.date(app.updateAt) }}<br>
+		<strong>更新日期：</strong> {{ smart.date(app.updateAt) }}<br>
 		<strong>作成者：</strong> {{ _.escape(app.createBy) }}<br>
-		<strong>作成日時：</strong> {{ smart.date(app.createAt) }}<br>
+		<strong>作成日期：</strong> {{ smart.date(app.createAt) }}<br>
 	</td>
 	<$ } else if(col.name == "rank") { $>
 	<td> {{ app.rank? app.rank: 0 }}</td>
